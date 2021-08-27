@@ -12,9 +12,11 @@ def constraint1(x):
     return 25 - x[0] * x[1] * x[2] * x[3]
 
 def constraint2(x):
+    sum_sq = 40
     for i in range(4):
-        sum_sq = 40 - x[i]**2
+        sum_sq = sum_sq - x[i]**2
     return sum_sq
+
 
 # Initial value (guess)
 x0 = [1, 5, 5, 1]
