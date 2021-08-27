@@ -1,6 +1,7 @@
 import numpy as np
 from scipy.optimize import minimize
 
+
 def objective(x):
     x1 = x[0]
     x2 = x[1]
@@ -8,8 +9,10 @@ def objective(x):
     x4 = x[3]
     return x1 * x4 * (x1 + x2 + x3)
 
+
 def constraint1(x):
     return 25 - x[0] * x[1] * x[2] * x[3]
+
 
 def constraint2(x):
     sum_sq = 40
