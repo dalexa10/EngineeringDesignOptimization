@@ -5,6 +5,7 @@ import scipy.ndimage as nd
 import os
 import sys
 
+#%%
 # This should help regarding workspaces creation (data structures in PuMA environment
 # help(puma.Workspace)  # Uncomment this for help in Workspace creation
 
@@ -58,6 +59,7 @@ ws_raw.voxel_length = 1.3e-6
 slices = puma.plot_slices(ws_raw, slice_direction='z', crange=None, cmap='gray', index=1)
 
 #%% Render
-puma.render_volume(ws_raw, notebook=False)
+# This part needs to be debugged (Matplotlib issue)...
+#puma.render_volume(ws_raw, notebook=False)
 
 #%%
