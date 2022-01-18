@@ -27,7 +27,6 @@ def armijo(func, x_cur, search_dir, c1, alpha0):
     """
     Verify f(x + alpha p) <= f(x) + c1 alpha grad(f).p
     """
-
     alpha = alpha0
     x_new = x_cur + alpha * search_dir
     f_cur = func(x_cur)
