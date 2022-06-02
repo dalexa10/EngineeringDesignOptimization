@@ -1,4 +1,4 @@
-# Let's use the component that we defined before
+# Import Paraboloid class
 from openmdao.test_suite.components.paraboloid import Paraboloid
 import openmdao.api as om
 
@@ -25,11 +25,11 @@ prob.model.add_objective('parab.f_xy')
 prob.model.add_constraint('const.g', lower=0, upper=10.)
 
 prob.setup()
-prob.run_driver();
+prob.run_driver()
 
 # Minimum value
 print(prob.get_val('parab.f_xy'))
 
-# Location of the minium
+# Location of the minimum
 print(prob.get_val('x'))
 print(prob.get_val('y'))
