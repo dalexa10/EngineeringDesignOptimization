@@ -64,8 +64,8 @@ def wolfe(func, x_cur, search_dir, c1, c2, alpha0):
         n_iter += 1
         if f_new > f_cur + c1 * alpha * np.dot(grad_cur, search_dir):
             ub = alpha
-            alpha = 0.5 * (lb + up)/2
-        elif np.dot(grad_new, search_dir) < c2 * np.dot(grad_cur, search_dir)
+            alpha = 0.5 * (lb + ub)/2
+        elif np.dot(grad_new, search_dir) < c2 * np.dot(grad_cur, search_dir):
             lb = alpha
             if np.isinf(ub):
                 alpha = 2 * lb
@@ -81,9 +81,9 @@ def wolfe(func, x_cur, search_dir, c1, c2, alpha0):
     return alpha, n_iter
 
 
-
-def steepest_descent(func, x0, stepRule, c1, c2, alpha0, tol=0.01):
-    """
-    Computes the steepest descend direction for unconstrained optimization
-    """
-
+#
+# def steepest_descent(func, x0, stepRule, c1, c2, alpha0, tol=0.01):
+#     """
+#     Computes the steepest descend direction for unconstrained optimization
+#     """
+#

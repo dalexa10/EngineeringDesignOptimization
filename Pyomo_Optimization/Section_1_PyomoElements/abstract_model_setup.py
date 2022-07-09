@@ -9,7 +9,7 @@ model.x1 = Var(bounds=(0, 4), within=NonNegativeReals)
 model.x2 = Var(bounds=(0, 4), within=NonNegativeReals)
 model.a11 = Param(mutable=True)
 
-model.eq1 = Constraint(expr=model.all*model.x1 + 3*model.x2 <= 4)
+model.eq1 = Constraint(expr=model.a11*model.x1 + 3*model.x2 <= 4)
 model.eq2 = Constraint(expr=9*model.x1 + model.x2 <= 6)
 
 model.obj = Objective(expr=3*model.x1 + model.x2, sense=maximize)
