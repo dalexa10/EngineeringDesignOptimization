@@ -1,5 +1,4 @@
 from components import *
-import numpy as np
 import openmdao.api as om
 
 class Circuit(om.Group):
